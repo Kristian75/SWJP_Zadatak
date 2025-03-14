@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8"> 
+  <link rel="stylesheet" href="styles.css" /> 
+  <script src="script.js"></script> 
+</head> 
+<body style="width: 950px;" onload="dohvatiDojmove(document.getElementById('txtPretraga').value)" onmousemove="uhvatiPozicijuMisa(event)"> 
+  <header class="divNaslov" style="height:85px;">
+    <h1>Skriptni jezici i web programiranje</h1>
+  </header> 
+   
+  <div id="content"> 
+    <table width="100%" cellpadding="5px" cellspacing="5px"> 
+      <tr> 
+        <td align="left" valign="top" width="570px"> 
+          <div class="divNaslov" style="height:65px;">
+            <h2>Knjiga dojmova</h2>
+          </div> 
+          <div style="margin: 0px 0px 0px 30px">
+            <h3>Pretraga: <input type="text" class="textBox" id="txtPretraga" onkeyup="dohvatiDojmove(this.value)" /></h3>
+          </div> 
+          <div id="divRezultat"></div> 
+        </td> 
+        <td align="right" valign="top"> 
+          <div id="divDodajNovi" style="width:300px; text-align: right;"> 
+            <div class="divNaslov" style="height:65px;">
+              <h2>Unesite Vaš dojam</h2>
+            </div> 
+            <p><span class="span">Ime i prezime: </span><input maxlength="50" type="text" id="txtImePrezime" class="textBox" onblur="kapitaliziraj(this)" /></p> 
+            <p><span class="span">E-mail adresa: </span><input maxlength="50" type="text" id="txtEmail" class="textBox" /></p> 
+            <p style="margin: 0px 0px 2px 5px; text-align:left;">
+              <span class="span">Tekst: </span>
+            </p> 
+            <p style="margin:0px">
+              <textarea id="txtTekst" class="textBox" style="width: 280px" rows="5"></textarea>
+            </p> 
+            <p style="text-align:right">
+              <input class="button" type="button" value="Dodaj" onclick="return dodajDojam()" />
+            </p> 
+          </div> 
+        </td> 
+      </tr> 
+    </table> 
+  </div> 
+  <div id="divDetalji"></div> 
+   
+  <footer style="text-align:center">©2025 Kristian Paradzikovic, Inc. All rights reserved</footer> 
+</body> 
+</html>
